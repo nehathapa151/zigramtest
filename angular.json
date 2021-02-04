@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cocktail-app"
+    }
+  },
+  "defaultProject": "cocktail-app",
+  "cli": {
+    "analytics": "318e7371-0e3d-43cd-9723-bf5e4a90f70f"
+  }
 }

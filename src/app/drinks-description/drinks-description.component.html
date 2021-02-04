@@ -1,0 +1,41 @@
+<section role="main">
+    <div class="details-bg" *ngIf="cockDetails?.strDrinkThumb"
+      [style.backgroundImage]="'url('+cockDetails?.strDrinkThumb+')'">
+      <div class="custom_bg">
+        <div class="details-container">
+            <mat-grid-list cols="6" rowHeight="600px" gutterSize="0">
+              <mat-grid-tile colspan="2" gutterSize="0">
+                <img src="{{cockDetails.strDrinkThumb}}" class="details-poster"
+                  alt="{{cockDetails.strDrink}}" />
+              </mat-grid-tile>
+              <mat-grid-tile colspan="4">
+                <mat-card-content class="details-info"> 
+                  <mat-card-title>
+                    <h2 class="cocktail-title">{{cockDetails.strDrink}}
+                    </h2>
+                  </mat-card-title>
+                  <mat-card-title>
+                  </mat-card-title>
+                  <h3>Overview-:</h3>
+                  <div class="overview">
+                    <p>
+                      {{cockDetails.strInstructions}}
+                    </p>
+                  </div>
+                  <h3 class="featured" dir="auto">Details-:</h3>
+                  <ol class="people">
+                    <li class="profile">
+                      <p class="character">Glass</p>
+                      <p>{{cockDetails.strGlass}}</p>
+                    </li>
+                    <li class="profile">
+                      <p class="character">IBA</p>
+                    </li>
+                  </ol>
+                </mat-card-content>
+              </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+      </div>
+    </div>
+  </section>

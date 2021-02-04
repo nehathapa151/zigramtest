@@ -1,0 +1,89 @@
+.search-box{
+  max-width: 500px;
+  margin: auto;
+  display:block;
+}
+ .outerWrapper{
+   padding: 20px;
+ } 
+ .cocktail-Outer{
+  display: flex;
+  flex-direction: row;
+flex-wrap: wrap;
+ }
+ .addinput{
+   height: 50px;
+ }
+ .cocktail-Outer mat-card{
+  flex: 0 0 28%;
+  padding:5px 20px !important;
+  border-radius: 4px;
+  margin: 10px;
+  box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,1);
+ }
+.drinks-image{
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  position: absolute;
+  top: 20%;
+}
+.outer_ring{
+  width: 40px;
+  height: 40px;
+  padding: 3px;
+  border-radius: 50%;
+  background-color: #081c22;
+}
+  
+
+.description{
+  padding-right: 8px;
+  margin-top: 25px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+  
+
+.cocktail-title{
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: #000;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+.more-info{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  bottom: 40px;
+  font-size: 0.8rem;
+  width: 100%;
+}
+.more-info a{
+  color: #1d000d !important;
+  border: 1px solid  #1d000d;
+  padding: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.more-info a:hover{
+background-color: #1d000d !important;
+color:  #ffffff !important;
+}
+@media (max-width:1200px){
+  .cocktail-Outer mat-card{
+    flex:0 0 44%;
+  }
+}
+@media (max-width:1040px){
+  .cocktail-Outer mat-card{
+    flex:0 0 95%;
+  }
+}

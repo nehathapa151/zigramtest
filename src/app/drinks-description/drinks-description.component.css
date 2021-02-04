@@ -1,0 +1,18 @@
+.details-container{
+    background-color: #f1f1ff;
+}
+.cocktail-title{
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: underline;
+}
+img.details-poster {
+    max-width: 100%;
+    border-radius: 4px;
+    margin: auto;
+    height: 300px;
+    border: 1px solid #e5e5e5;
+}
+.people{
+    padding-left: 20px;
+}

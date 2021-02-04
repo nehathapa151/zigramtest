@@ -1,0 +1,39 @@
+<section class="outerWrapper" role="main">
+        <mat-form-field appearance="outline" class="search-box">
+            <!-- <mat-label>Search for Drink</mat-label> -->
+            <input matInput class="form-control addinput" [ngModel]="searchQuery"
+              (ngModelChange)="searchQuery = $event ; searchCocktail($event)" placeholder="Enter cocktail name...">
+            <mat-icon matSuffix>youtube_searched_for</mat-icon>
+          </mat-form-field>
+      <div class="cocktail-Outer">
+        <mat-card *ngFor="let cocktail of cocktails.drinks" style="padding: 0; height: 280px" routerLink="/cocktail-details/{{cocktail.idDrink}}">
+          <mat-grid-list cols="5" rowHeight="280px" class="fade-in">
+            <mat-grid-tile colspan="2">
+              <img src="{{cocktail.strDrinkThumb}}/preview" class="drinks-image" alt="{{cocktail.strDrink}}" />
+            </mat-grid-tile>
+            <mat-grid-tile colspan="3">
+              <mat-card-content style="top:0; position: absolute; padding: 10px">
+                <mat-card-header>
+                  <mat-card-title>
+                    <a mat-button routerLink="/cocktail-details/{{cocktail.idDrink}}" class="cocktail-title">{{cocktail.strDrink}}</a>
+                  </mat-card-title>
+                </mat-card-header>
+                <div class="description">
+                  {{cocktail.strInstructions}}
+                </div>
+              </mat-card-content>
+              <div class="more-info">
+                <a mat-button routerLink="/cocktail-details/{{cocktail.idDrink}}">More Detail</a>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </mat-card>
+        <mat-card *ngIf="noResult">
+          <mat-card-content>
+            <mat-card-header>
+              <h2>No cocktails found...</h2>
+            </mat-card-header>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </section>
